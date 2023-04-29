@@ -10,18 +10,6 @@ logging.basicConfig(filename='logging.log',
 logger = logging.getLogger(__name__)
 
 
-# async def echo(update, context):
-#     # получаем обьект сообщения (локации)
-#     message = update.message
-#     print(message)
-#     # вытаскиваем из него долготу и ширину
-#     current_position = (message.location.longitude, message.location.latitude)
-#     print(message)
-#     # создаем строку в виде ДОЛГОТА,ШИРИНА
-#     coords = f"{current_position[0]},{current_position[1]}"
-#     await update.message.reply_text(coords)
-
-
 async def echo(update, context):
     if update.edited_message:
         loc = update.edited_message
